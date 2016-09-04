@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var park = require('./routes/park'),
+var bike = require('./routes/bike'),
   user = require('./routes/user'),
   assets = require('./routes/public'),
   index = require('./routes/index');
@@ -25,8 +25,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app
-  .use('/park', park) //databade ISP_parks
-  .use('/user', user) //databade ISP_users
+  .use('/bike', bike) //databade bikes
+  .use('/user', user) //databade users
   .use('/public', assets) //css js e img per html
   .use('/app', index); //applicazione utente
 

@@ -9,15 +9,16 @@ angular.module('starter', ['ngRoute'])
         templateUrl:'/app/about'
         //controller controllerAS
       })
+      .when('/user',{
+        templateUrl:'/app/user',
+        controller: 'userCtrl'
+      })
       .when('/contact',{
         templateUrl:'/app/contact'
         //controller controllerAS
       })
       //TODO aggiungere login e user page
-      /*.when('/user',{
-        templateUrl:'/app/user'
-        //controller controllerAS
-      })
+      /*
       .when('/login',{
         templateUrl:'/app/login'
         //controller controllerAS

@@ -10,23 +10,13 @@ router.route('/').get(function(req, res){
   res.render('./app');
 });
 router.route('/map').get(function(req, res){
-  res.render('./map');
+  res.render('./bike');
 });
 router.route('/about').get(function(req, res){
-  res.render('./layouts/about');
+  res.render('./about');
 });
 router.route('/contact').get(function(req, res){
-  res.render('./layouts/contact');
+  res.render('./contact');
 });
-/*
-router.route('/user').get(function(req, res){
-  res.render('./layouts/user');
-});
-router.route('/login').get(function(req, res){
-  res.render('./layouts/login');
-});
-router.route('/userMap').get(function(req, res){
-  res.render('./layouts/userMap');
-})
-*/
+
 module.exports = router;
