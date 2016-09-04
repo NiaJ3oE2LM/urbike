@@ -6,23 +6,42 @@ html,body, [ng-view], .map{
   height: 100%;
 }
 .navbar{
-  background: rgba(253, 216, 53, 0.9);
+  background: rgba(30, 136, 229, 0.8);
   margin: 0;
+}
+
+.icon-bar{
+  background-color:#fff !important;
+}
+
+.navbar-brand, .navbar-header>a, .navbar-nav>li>a{
+color:#fff !important;
 }
 
 .navbar, .navbar-header, .navbar-collapse{
   border: 0px;
 }
 
+img.inv{
+  -webkit-filter:invert(100%);
+  filter: invert(100%);
+}
+
 ul.nav li{
   padding: 0.5em;
   font-size: 1.2em;
 }
-nav img{
-  padding-right: 1em;
-  opacity: 0.5;
+.navbar-header img{
+  display:block;
+  margin:auto;
+  opacity: 0.9;
   filter: alpha(opacity=50);
 }
+
+ul img{
+  padding-right: 1em;
+}
+
 .park{
   position:fixed;
   width:2em;

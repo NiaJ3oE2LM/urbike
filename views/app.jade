@@ -3,30 +3,24 @@ extend ./base
 block body
   nav.navbar.navbar-default.navbar-fixed-bottom
     .container-fluid
-      .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-          span.sr-only Toggle navigation
-          span.icon-bar.top-bar
-          span.icon-bar.middle-bar
-          span.icon-bar.bottom-bar
-        a.navbar-brand(href='#/map',  data-toggle='collapse', data-target='#navbar') Urbike
+      .navbar-header.row
+        a.navbar-brand.col-xs-4(href='#/user')
+          img.inv.navbar-icon(src="public/ic_person_outline_24px.svg")
+        a.navbar-brand.col-xs-4(href='#/map')
+          img.inv(src="public/ic_map_24px.svg")
+        .col-xs-4
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.icon-bar.top-bar
+            span.icon-bar.middle-bar
+            span.icon-bar.bottom-bar
       #navbar.navbar-collapse.collapse
         ul.nav.navbar-nav
           li
-            a(href='#/map', data-toggle='collapse', data-target='#navbar')
-              img(src="public/ic_map_24px.svg")
-              |Map
-          li
-            a(href='#/user', data-toggle='collapse', data-target='#navbar')
-              img(src="public/ic_info_outline_24px.svg")
-              |Account
-          li
             a(href='#/about', data-toggle='collapse', data-target='#navbar')
-              img(src="public/ic_info_outline_24px.svg")
+              img.inv(src="public/ic_info_outline_24px.svg")
               |About
           li
             a(href='#/contact', data-toggle='collapse', data-target='#navbar')
-              img(src="public/ic_mail_outline_24px.svg")
+              img.inv(src="public/ic_mail_outline_24px.svg")
               |Contact
-
   div(ng-view)
