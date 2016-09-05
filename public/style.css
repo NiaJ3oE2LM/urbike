@@ -35,7 +35,8 @@ ul.nav li{
   display:block;
   margin:auto;
   opacity: 0.9;
-  filter: alpha(opacity=50);
+  filter: alpha(opacity=90);
+  height: 1.5em;
 }
 
 ul img{
