@@ -11,25 +11,26 @@ var port = new SerialPort('/dev/ttyACM0', {
   if (err) {
     return console.log('Error: ', err.message);
   }
+  else console.log("usb ok");
 });
 
 port.on('data', function (data) {
-  //create new line on register table with bikeId as parameter
-  if(data=='bikeId'){
-    port.on('data', function(data){
-      db.setPin(1, data, function(err, data){ //bikeId 1
-        if(err)console.log(err);
-        else console.log("db updated");
-      });
+  //create new line on register table with bikeId as paramete
+  var req= JSON.parse (data);
+  //console.log(req);
+  if(req.mode=="id"){
+    db.setPin(1, req.value, function(err, res){
+      if(err)console.log(err);
+      else console.log(res);
     });
   }
-  //check for the user to upload the correct id -- polling with timeout
-  else if(data=="reg"){
-    port.on('data', function(id){//id line register
-      db.getPin(id, function(err, data){
-        if(err)console.log(err);
-        else console.log("data"); //TODO check if result is null of number
-      });
+  else if(req.mode=="wait"){
+    db.getUser(1, function(err, res){
+      if(err)console.log(err);
+      else if(res[0].userId!=null){
+        port.write('1');
+        console.log("user ok");
+      }
     });
   }
 });
