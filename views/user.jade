@@ -1,6 +1,13 @@
 .panel
   .panel-heading
    h2.panel-title 
-    |Account detais
+    |unlock test user 2 bike 1
   .panel-body
-   |you successfully logged in 
+    .input-group.input-group-lg
+      span#basic-addon1.input-group-addon code
+      input.form-control(type='number', placeholder="type the code you see on bike's diplay", aria-describedby='basic-addon2', ng-model='pin',)
+    <br>
+    button#test.btn.btn-primary.center-block(type='button', data-toggle='button',  aria-pressed='false', autocomplete='off')
+      h3 unlock
+
+      
