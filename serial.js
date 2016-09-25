@@ -19,9 +19,10 @@ port.on('data', function (data) {
   var req= JSON.parse (data);
   //console.log(req);
   if(req.mode=="id"){
+    console.log(req.value);
     db.setPin(1, req.value, function(err, res){
       if(err)console.log(err);
-      else console.log(res);
+      //else console.log(res);
     });
   }
   else if(req.mode=="wait"){

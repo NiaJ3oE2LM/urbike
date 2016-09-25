@@ -31,7 +31,7 @@ exports.getUser = function (bikeId, callback){//bike sets his pin
 exports.setPin = function (bikeId, pin, callback){//bike sets his pin
   //TODO il database gestisce la logica dell'insert in register controllando che non si possano inserire duplicati.NON SE PO!
   var sql="update register set userId=null, pin="+pin+",timeStart=null where bikeId=(select id from bikes where id= "+bikeId+") and timeFinish is not null";
-  console.log(sql);
+  //console.log(sql);
   connection.query(sql, function(err, result){
 
     if(err) callback(err, null);

@@ -30,7 +30,7 @@ var server = http.createServer(options, app);
  * Listen on provided port, on all network interfaces.
  */
 
- var hostname= 'localhost';  //64.137.209.170   192.168.0.105   192.168.50.205 192.168.1.184
+ var hostname= '192.168.0.106';  //64.137.209.170   192.168.0.105   192.168.50.205 192.168.1.184
 
 server.listen(port, hostname);
 server.on('error', onError);

@@ -121,6 +121,7 @@ new ol.layer.Vector({
 }
 
 
+/*
 function chiamata(pos) {
   //console.log(pos[0], pos[1]);
   $http({
@@ -133,6 +134,7 @@ function chiamata(pos) {
     console.log(response);
   });
 }
+*/
 
 //modal info parks
 map.on('click', function(e){
